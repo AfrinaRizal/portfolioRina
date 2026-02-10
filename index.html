@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AfrinaRizal - Personal Portfolio </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+.badge {
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+.bg-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(13, 110, 253, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-item:hover {
+    transform: translateY(-6px);
+    transition: 0.3s ease;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--bs-primary);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(13,110,253,.2);
+}
+
+.timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--bs-primary);
+}
+
+.portfolio-img {
+    position: relative;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(124, 172, 189, 0.92);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: 0.4s ease;
+}
+
+.portfolio-img:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h5 {
+    font-weight: bold;
+}
+
+.portfolio-overlay p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.portfolio-overlay .badge {
+    font-size: 11px;
+    margin: 2px;
+}
+
+
+</style>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Afrina</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Experience</a>
+            </div>
+            <!-- <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-primary fw-bold m-0">Afrina</h1>
+            </a> -->
+            <div class="navbar-nav me-auto py-0">
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0" id="home">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-7 py-6">
+                    <h3 class="text-primary mb-3">I'm</h3>
+                    <h1 class="display-3 mb-3 text-white">Adriyatol Afrina</h1>
+                    <h2 class="typed-text-output d-inline text-white"></h2>
+                    <div class="typed-text d-none">
+                        Programmer, Web Developer, Fullstack Developer
+                    </div>
+
+                    <div class="d-flex align-items-center pt-4">
+                        <a href="cv/AdriyatolAfrina-CV.pdf"
+                        class="btn btn-primary py-3 px-4 me-3">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+
+                <!-- LEFT -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">3</h1>
+                            <h6 class="mb-0">Years Experience</h6>
+                        </div>
+                        <h3 class="lh-base mb-0">
+                            Programmer specializing in Web & System Development
+                        </h3>
+                    </div>
+
+                    <p class="mb-4">
+                        I am a <strong>Programmer with 3+ years of experience</strong> in developing
+                        enterprise systems, web applications, and RESTful APIs.
+                        I specialize in <strong>Laravel, Laravel Lumen, PHP, JavaScript</strong>
+                        and modern database-driven applications.
+                    </p>
+
+                    <p class="mb-3">
+                        <i class="far fa-check-circle text-primary me-3"></i>
+                        Strong experience in MVC architecture & Agile development
+                    </p>
+                    <p class="mb-3">
+                        <i class="far fa-check-circle text-primary me-3"></i>
+                        Experienced in REST API integration & system optimization
+                    </p>
+                    <p class="mb-3">
+                        <i class="far fa-check-circle text-primary me-3"></i>
+                        Focused on clean code, performance & maintainability
+                    </p>
+                    <p class="mb-3">
+                        <i class="far fa-check-circle text-primary me-3"></i>
+                        Comfortable working in team-based and client-facing environments
+                    </p>
+
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="cv.pdf" target="_blank">
+                        <i class="fa fa-download me-2"></i>Download Resume
+                    </a>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+
+                    <!-- Tech Stack -->
+                    <h5 class="mb-3">Tech Stack</h5>
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-1 mb-1">Laravel</span>
+                        <span class="badge bg-primary me-1 mb-1">Laravel Lumen</span>
+                        <span class="badge bg-primary me-1 mb-1">PHP</span>
+                        <span class="badge bg-primary me-1 mb-1">JavaScript</span>
+                        <span class="badge bg-primary me-1 mb-1">HTML</span>
+                        <span class="badge bg-primary me-1 mb-1">CSS</span>
+                        <span class="badge bg-primary me-1 mb-1">REST API</span>
+                        <span class="badge bg-primary me-1 mb-1">MySQL</span>
+                        <span class="badge bg-primary me-1 mb-1">PostgreSQL</span>
+                        <span class="badge bg-primary me-1 mb-1">Git</span>
+                    </div>
+
+                    <!-- Highlights -->
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Enterprise Systems</h5>
+                        <h2 class="text-primary fw-bold mb-0">5+</h2>
+                    </div>
+                    <p class="mb-4">
+                        Experience working on large-scale government and enterprise systems
+                        including ASCDM, Permit Awning, and SSISP.
+                    </p>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Delivered</h5>
+                        <h2 class="text-primary fw-bold mb-0">10+</h2>
+                    </div>
+                    <p class="mb-0">
+                        Delivered full-cycle development from requirement gathering to UAT & FAT.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                    <!-- <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p> -->
+                    <h3 class="mb-4">My Skills</h3>
+                    <div class="row">
+
+                        <!-- Advanced -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow h-100 border-0">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary fw-bold">🚀 Advanced</h4>
+                                    <p class="text-muted">Highly proficient with real-world experience</p>
+
+                                    <div class="mb-3">
+                                        <span class="badge bg-primary me-1 mb-1">Laravel Lumen</span>
+                                        <span class="badge bg-primary me-1 mb-1">PHP</span>
+                                        <span class="badge bg-primary me-1 mb-1">HTML</span>
+                                        <span class="badge bg-primary me-1 mb-1">CSS</span>
+                                        <span class="badge bg-primary me-1 mb-1">JavaScript</span>
+                                        <span class="badge bg-primary me-1 mb-1">jQuery</span>
+                                        <span class="badge bg-primary me-1 mb-1">REST APIs</span>
+                                        <span class="badge bg-primary me-1 mb-1">MySQL</span>
+                                        <span class="badge bg-primary me-1 mb-1">PostgreSQL</span>
+                                        <span class="badge bg-primary me-1 mb-1">Bootstrap</span>
+                                    </div>
+
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated d-flex align-items-center justify-content-center"
+                                            style="width:95%">
+                                            Advanced Level
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experienced -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow h-100 border-0">
+                                <div class="card-body">
+                                    <h4 class="card-title text-warning fw-bold">💡 Experienced</h4>
+                                    <p class="text-muted">Strong understanding with project exposure</p>
+
+                                    <div class="mb-3">
+                                        <span class="badge bg-warning text-dark me-1 mb-1">Laravel</span>
+                                        <span class="badge bg-warning text-dark me-1 mb-1">C++</span>
+                                        <span class="badge bg-warning text-dark me-1 mb-1">MVC</span>
+                                        <span class="badge bg-warning text-dark me-1 mb-1">SDLC</span>
+                                        <span class="badge bg-warning text-dark me-1 mb-1">Agile</span>
+                                        <span class="badge bg-warning text-dark me-1 mb-1">Premiere Pro</span>
+                                        <span class="badge bg-warning text-dark me-1 mb-1">Illustrator</span>
+                                    </div>
+
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated d-flex align-items-center justify-content-center"
+                                            style="width:80%">
+                                            Experienced Level
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beginner -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card shadow h-100 border-0">
+                                <div class="card-body">
+                                    <h4 class="card-title text-success fw-bold">🌱 Beginner</h4>
+                                    <p class="text-muted">Currently learning and improving</p>
+
+                                    <div class="mb-3">
+                                        <span class="badge bg-success me-1 mb-1">Java</span>
+                                        <span class="badge bg-success me-1 mb-1">Photoshop</span>
+                                        <span class="badge bg-success me-1 mb-1">Burp Suite</span>
+                                    </div>
+
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated d-flex align-items-center justify-content-center"
+                                            style="width:60%">
+                                            Beginner Level
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                        </li>
+                        <li class="nav-item w-50">
+                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">May 2023 – Present</span>
+                                        <h5>Programmer</h5>
+                                        <h6>Olive Intelligent Management Sdn. Bhd</h6>
+                                        <p>Developing and maintaining web applications, databases, and internal systems.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">Oct 2022 – Mar 2023</span>
+                                        <h5>Information Technology Intern</h5>
+                                        <h6>National Institute of Public Administration (INTAN)</h6>
+                                        <p>Provided IT support, system documentation, and assisted in system maintenance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade p-0">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot">
+                                        <i class="bi bi-mortarboard-fill"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">Sep 2019 – Mar 2023</span>
+                                        <h5>Bachelor of Computer Science (Database Management) (Hons)</h5>
+                                        <h6>Universiti Teknikal Malaysia Melaka</h6>
+
+                                        <p class="mb-1">
+                                            <strong>CGPA:</strong>
+                                            <span class="text-primary fw-bold">3.62</span>
+                                        </p>
+
+                                        <span class="badge bg-primary">
+                                            Dean’s List (Sem 2 – 7)
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot">
+                                    </div>
+                                    <div class="timeline-content">
+                                        <span class="timeline-date">2018 – 2019</span>
+                                        <h5>Science PST Module II</h5>
+                                        <h6>Kedah Matriculation College</h6>
+
+                                        <p class="mb-0">
+                                            <strong>CGPA:</strong>
+                                            <span class="text-primary fw-bold">3.08</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Work Experience</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Hire Me</a>
+                </div>
+            </div>
+            <div class="container py-5">
+
+
+                <div class="row g-4">
+
+                    <!-- Olive Intelligent Management -->
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item bg-white rounded shadow h-100 p-4 p-lg-5">
+
+                            <!-- Header -->
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-icon me-3">
+                                    <i class="fa fa-code fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">Programmer</h4>
+                                    <small class="text-muted">
+                                        <i class="fa fa-building me-1"></i>
+                                        Olive Intelligent Management Sdn. Bhd
+                                    </small>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="mt-3">
+                                Developed and maintained enterprise systems and web applications using
+                                <strong>modern backend and frontend technologies</strong>.
+                            </p>
+
+                            <!-- Tech Badges -->
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1 mb-1">Laravel</span>
+                                <span class="badge bg-primary me-1 mb-1">Laravel Lumen</span>
+                                <span class="badge bg-primary me-1 mb-1">PHP</span>
+                                <span class="badge bg-primary me-1 mb-1">JavaScript</span>
+                                <span class="badge bg-primary me-1 mb-1">HTML</span>
+                                <span class="badge bg-primary me-1 mb-1">CSS</span>
+                                <span class="badge bg-primary me-1 mb-1">REST APIs</span>
+                                <span class="badge bg-primary me-1 mb-1">jQuery</span>
+                                <span class="badge bg-primary me-1 mb-1">JSON</span>
+                                <span class="badge bg-primary me-1 mb-1">MySQL</span>
+                                <span class="badge bg-primary me-1 mb-1">PostgreSQL</span>
+                            </div>
+
+                            <!-- Responsibilities -->
+                            <ul class="mt-3">
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Designed, developed, and maintained reliable software solutions.</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Resolved bugs, performance issues, and system defects.</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Designed and managed databases using MySQL and PostgreSQL.</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Applied MVC architecture and Agile development practices.</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Collaborated using Git and version control workflows.</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Prepared URS and SRS technical documentation.</li>
+                            </ul>
+
+                            <!-- Projects -->
+                            <h6 class="mt-4 fw-bold">
+                                <i class="fa fa-folder-open me-2 text-primary"></i>Key Projects
+                            </h6>
+
+                            <ul>
+                                <li>
+                                    <strong>ASCDM</strong>
+                                    <span class="badge bg-secondary ms-2">Enterprise System</span>
+                                    <ul>
+                                        <li>Booking4U – Maintenance & reporting module</li>
+                                        <li>ePenilaian – Survey feedback (list, chart, Excel)</li>
+                                        <li>CTMG – REST API integration</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <strong>Permit Awning</strong>
+                                    <span class="badge bg-warning text-dark ms-2">UAT / FAT</span>
+                                    – System maintenance & client testing (MBJB)
+                                </li>
+
+                                <li>
+                                    <strong>SSISP</strong>
+                                    <span class="badge bg-info ms-2">Laravel</span>
+                                    – Spatie roles & permissions, Agile development
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <!-- INTAN Internship -->
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item bg-white rounded shadow h-100 p-4 p-lg-5">
+
+                            <!-- Header -->
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-icon me-3">
+                                    <i class="fa fa-laptop fa-2x text-success"></i>
+                                </div>
+                                <div>
+                                    <h4 class="mb-0">IT Intern</h4>
+                                    <small class="text-muted">
+                                        <i class="fa fa-university me-1"></i>
+                                        National Institute of Public Administration (INTAN)
+                                    </small>
+                                </div>
+                            </div>
+
+                            <!-- Tech Badges -->
+                            <div class="mb-3">
+                                <span class="badge bg-success me-1 mb-1">PHP</span>
+                                <span class="badge bg-success me-1 mb-1">HTML</span>
+                                <span class="badge bg-success me-1 mb-1">CSS</span>
+                                <span class="badge bg-success me-1 mb-1">JavaScript</span>
+                                <span class="badge bg-success me-1 mb-1">phpMyAdmin</span>
+                            </div>
+
+                            <ul class="mt-3">
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Tested system modules and fixed implementation issues.</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Improved UI for iAdmin and INTURA One Stop.</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Gathered user requirements and converted them into features.</li>
+                                <li><i class="fa fa-check-circle text-success me-2"></i>Managed ICT setup for seminars and live streaming.</li>
+                            </ul>
+
+                            <h6 class="mt-4 fw-bold">
+                                <i class="fa fa-project-diagram me-2 text-success"></i>Main Internship Project
+                            </h6>
+
+                            <p>
+                                <strong>iJadual System</strong> – Calendar-based timetable system for staff using PHP and JavaScript.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    
+
+    <!-- Projects Start -->
+    <div class="container-xxl py-6 pt-5" id="project">
+        <div class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                    <p class="text-muted mt-2">Real-world systems I have worked on</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <li class="mx-3 active" data-filter="*">All</li>
+                        <li class="mx-3" data-filter=".web">Web Systems</li>
+                        <!-- <li class="mx-3" data-filter=".api">API / Backend</li> -->
+                        <li class="mx-3" data-filter=".academic">Academic Projects</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+
+                <!-- Booking4U -->
+                <div class="col-lg-4 col-md-6 portfolio-item web">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-fasiliti.jpeg" alt="Booking4U">
+
+                        <div class="portfolio-overlay">
+                            <h5>Booking4U</h5>
+                            <p>Facility Booking System</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-primary">Laravel Lumen</span>
+                                <span class="badge bg-primary">REST API</span>
+                                <span class="badge bg-primary">Bootstrap</span>
+                            </div>
+
+                            <div class="portfolio-btn">
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="img/project-fasiliti.jpeg" data-lightbox="portfolio">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="https://admin.booking4u.intan.my/login/" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ePenilaian -->
+                <div class="col-lg-4 col-md-6 portfolio-item web">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-penilaian.jpeg" alt="ePenilaian">
+
+                        <div class="portfolio-overlay">
+                            <h5>ePenilaian</h5>
+                            <p>Online Evaluation System</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-primary">Laravel Lumen</span>
+                                <span class="badge bg-primary">Charts</span>
+                                <span class="badge bg-primary">Excel Export</span>
+                            </div>
+
+                            <div class="portfolio-btn">
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="img/project-penilaian.jpeg" data-lightbox="portfolio">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="https://admin.epenilaian.intan.my/login/" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ASCDM -->
+                <div class="col-lg-4 col-md-6 portfolio-item web">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/profil-akses.jpeg" alt="ASCDM">
+
+                        <div class="portfolio-overlay">
+                            <h5>ASCDM</h5>
+                            <p>Government Competency System</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-primary">REST API</span>
+                                <span class="badge bg-primary">Integration</span>
+                                <span class="badge bg-primary">PostgreSQL</span>
+                            </div>
+
+                            <div class="portfolio-btn">
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="img/profil-akses.jpeg" data-lightbox="portfolio">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="https://akses.selangor.gov.my/" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTMG -->
+                <div class="col-lg-4 col-md-6 portfolio-item web">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-ctmg.jpeg" alt="CTMG">
+
+                        <div class="portfolio-overlay">
+                            <h5>CTMG</h5>
+                            <p>Competency Tracking Gateway</p>
+
+                            <div class="mb-2">
+                                <span class="badge bg-primary">Laravel Lumen</span>
+                                <span class="badge bg-primary">REST API</span>
+                                <span class="badge bg-primary">UAT</span>
+                            </div>
+
+                            <div class="portfolio-btn">
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="img/project-ctmg.jpeg" data-lightbox="portfolio">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="https://akses.selangor.gov.my/" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MBJB -->
+                <div class="col-lg-4 col-md-6 portfolio-item web">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/project-mbjb.jpeg" alt="MBJB">
+
+                        <div class="portfolio-overlay">
+                            <h5>MBJB</h5>
+                            <p>Sistem Permit Awning</p>
+                            <div class="mb-2">
+                                <span class="badge bg-primary">Laravel Lumen</span>
+                                <span class="badge bg-primary">REST API</span>
+                                <span class="badge bg-primary">UAT</span>
+                            </div>
+
+                            <div class="portfolio-btn">
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="img/project-mbjb.jpeg" data-lightbox="portfolio">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a class="btn btn-sm btn-outline-light mx-1"
+                                href="https://akses.selangor.gov.my/" target="_blank">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Academic Project: Workshop 1 -->
+<div class="col-lg-4 col-md-6 portfolio-item academic">
+    <div class="card h-100 shadow border-0">
+        <div class="card-body text-center">
+
+            <div class="mb-3">
+                <i class="fa fa-futbol fa-3x text-primary"></i>
+            </div>
+
+            <span class="badge bg-secondary mb-2">Workshop 1 • 2020</span>
+            <h5 class="mt-2">Online Football Ticketing System</h5>
+
+            <p class="text-muted small">
+                An online ticketing system that allows users to check match schedules,
+                view ticket availability, and purchase football match tickets.
+            </p>
+
+            <div class="mt-3">
+                <span class="badge bg-primary">C++</span>
+                <span class="badge bg-primary">HTML</span>
+                <span class="badge bg-primary">phpMyAdmin</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Academic Project: Workshop 2 -->
+<div class="col-lg-4 col-md-6 portfolio-item academic">
+    <div class="card h-100 shadow border-0">
+        <div class="card-body text-center">
+
+            <div class="mb-3">
+                <i class="fa fa-user-graduate fa-3x text-primary"></i>
+            </div>
+
+            <span class="badge bg-secondary mb-2">Workshop 2 • 2021</span>
+            <h5 class="mt-2">University Student Information System</h5>
+
+            <p class="text-muted small">
+                A group project system that enables students to access academic
+                information and interact with university subsystems.
+            </p>
+
+            <div class="mt-3">
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-primary">HTML</span>
+                <span class="badge bg-primary">CSS</span>
+                <span class="badge bg-primary">JavaScript</span>
+                <span class="badge bg-primary">phpMyAdmin</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Academic Project: Final Year Project -->
+<div class="col-lg-4 col-md-6 portfolio-item academic">
+    <div class="card h-100 shadow border-0">
+        <div class="card-body text-center">
+
+            <div class="mb-3">
+                <i class="fa fa-store fa-3x text-primary"></i>
+            </div>
+
+            <span class="badge bg-secondary mb-2">Final Year Project • 2022</span>
+            <h5 class="mt-2">HomeGallery E-Commerce System</h5>
+
+            <p class="text-muted small">
+                An e-commerce platform that allows customers to browse,
+                search, and purchase home products online.
+            </p>
+
+            <div class="mt-3">
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-primary">HTML</span>
+                <span class="badge bg-primary">CSS</span>
+                <span class="badge bg-primary">JavaScript</span>
+                <span class="badge bg-primary">phpMyAdmin</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+            </div>
+            
+        </div>
+    </div>
+    <!-- Projects End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">My address:</p>
+                    <h3 class="fw-bold">Bukit Banyan, 08000 Sungai Petani, Kedah</h3>
+                    <p class="mb-2">Currently stay in:</p>
+                    <h3 class="fw-bold">Shah Alam, Selangor</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">+013 418 6114</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">afrinarizal00@gmail.com</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom text-secondary" href="#">AfrinaRizal</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
+                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
