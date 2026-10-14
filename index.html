@@ -3,1130 +3,861 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AfrinaRizal - Personal Portfolio </title>
+    <title>Adriyatol Afrina — Software Developer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Software Developer, Laravel, React, Full Stack, Malaysia" name="keywords">
     <meta content="Adriyatol Afrina — Software Developer specializing in Laravel/Lumen, React (TypeScript) and enterprise government systems." name="description">
+    <meta name="theme-color" content="#0b0d17">
+    <script>document.documentElement.classList.add('js');</script>
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236244C5'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' fill='white' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Bootstrap (grid & utilities) -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+    <!-- Site Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<style>
-.badge {
-    padding: 6px 10px;
-    font-size: 12px;
-}
 
-.bg-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
-    background: rgba(13, 110, 253, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.service-item:hover {
-    transform: translateY(-6px);
-    transition: 0.3s ease;
-}
-
-.timeline {
-    position: relative;
-    padding-left: 30px;
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--bs-primary);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -2px;
-    top: 5px;
-    width: 16px;
-    height: 16px;
-    background: var(--bs-primary);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(13,110,253,.2);
-}
-
-.timeline-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-}
-
-.timeline-content:hover {
-    transform: translateY(-5px);
-}
-
-.timeline-date {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--bs-primary);
-}
-
-.portfolio-img {
-    position: relative;
-}
-
-.portfolio-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(124, 172, 189, 0.92);
-    color: #fff;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    transition: 0.4s ease;
-}
-
-.portfolio-img:hover .portfolio-overlay {
-    opacity: 1;
-}
-
-.portfolio-overlay h5 {
-    font-weight: bold;
-}
-
-.portfolio-overlay p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.portfolio-overlay .badge {
-    font-size: 11px;
-    margin: 2px;
-}
-
-
-</style>
-
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
-
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="text-primary fw-bold m-0">Afrina</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#skill" class="nav-item nav-link">Skills</a>
-                <a href="#service" class="nav-item nav-link">Experience</a>
-            </div>
-            <div class="navbar-nav me-auto py-0">
-                <a href="#project" class="nav-item nav-link">Projects</a>
-                <a href="#achievements" class="nav-item nav-link">Achievements</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
+    <nav class="navbar navbar-expand-lg fixed-top site-nav">
+        <div class="container">
+            <a href="#home" class="navbar-brand">
+                <span class="brand-mark" aria-hidden="true">AR</span>
+                Afrina Rizal
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto align-items-lg-center">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skill" class="nav-link">Skills</a>
+                    <a href="#service" class="nav-link">Experience</a>
+                    <a href="#project" class="nav-link">Projects</a>
+                    <a href="#achievements" class="nav-link">Achievements</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="cv/AdriyatolAfrina-CV.pdf" target="_blank" rel="noopener" class="btn btn-accent btn-sm px-3 py-2 ms-lg-3 mt-2 mt-lg-0">
+                        <i class="fa fa-file-alt me-2"></i>Resume
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
 
+    <main id="main">
 
     <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 mt-0" id="home">
-        <div class="container">
-            <div class="row min-vh-100 align-items-center">
-                <div class="col-lg-7 py-6">
-                    <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3 text-white">Adriyatol Afrina</h1>
-                    <h2 class="typed-text-output d-inline text-white"></h2>
-                    <div class="typed-text d-none">
-                        Software Developer, Full Stack Developer, Laravel Developer, Software Engineer, System Developer
-                    </div>
+    <header class="hero" id="home">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-glow two" aria-hidden="true"></div>
 
-                    <div class="d-flex align-items-center pt-4">
-                        <a href="cv/AdriyatolAfrina-CV.pdf"
-                        class="btn btn-primary py-3 px-4 me-3">
-                            Download CV
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7">
+                    <div class="prompt reveal"><span class="user">afrina@dev</span>:<span class="path">~</span>$ whoami</div>
+                    <h1 class="reveal" style="--d:.05s">Adriyatol <span class="accent">Afrina</span></h1>
+                    <div class="role reveal" style="--d:.1s">
+                        <span class="gt">&gt;</span><span class="typed-text-output"></span>
+                        <div class="typed-text d-none">Software Developer, Full Stack Developer, Laravel Developer, Software Engineer, System Developer</div>
+                    </div>
+                    <p class="summary reveal" style="--d:.15s">
+                        I build and maintain enterprise web systems and REST APIs for Malaysian government
+                        agencies and local authorities &mdash; from requirement gathering through UAT, FAT and PAT.
+                    </p>
+                    <div class="hero-links reveal" style="--d:.2s">
+                        <a href="#project" class="btn btn-accent">View my work<i class="fa fa-arrow-right ms-2"></i></a>
+                        <a href="cv/AdriyatolAfrina-CV.pdf" target="_blank" rel="noopener" class="btn btn-dark-ghost">
+                            <i class="fa fa-download me-2"></i>Download CV
                         </a>
+                        <a class="btn btn-dark-ghost btn-icon" href="https://github.com/AfrinaRizal" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-dark-ghost btn-icon" href="https://www.linkedin.com/in/afrina-rizal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="status reveal" style="--d:.25s"><span class="dot"></span>Currently at Olive Intelligent Management · Shah Alam, MY</div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="editor-wrap reveal" style="--d:.2s">
+                        <div class="editor" role="img" aria-label="Profile summary written as a TypeScript object">
+                            <div class="editor-bar">
+                                <div class="dots"><i></i><i></i><i></i></div>
+                                <span class="editor-tab"><i class="fa fa-file-code"></i>afrina.ts</span>
+                            </div>
+<pre aria-hidden="true"><span class="ln"><span class="tk-c">// profile.config</span></span><span class="ln"><span class="tk-k">export const</span> <span class="tk-p">afrina</span><span class="tk-o">:</span> <span class="tk-t">Developer</span> <span class="tk-o">=</span> {</span><span class="ln">  name<span class="tk-o">:</span> <span class="tk-s">"Adriyatol Afrina"</span>,</span><span class="ln">  role<span class="tk-o">:</span> <span class="tk-s">"Software Developer"</span>,</span><span class="ln">  experience<span class="tk-o">:</span> <span class="tk-s">"3+ years"</span>,</span><span class="ln">  backend<span class="tk-o">:</span> [<span class="tk-s">"Laravel"</span>, <span class="tk-s">"Lumen"</span>, <span class="tk-s">"PHP"</span>],</span><span class="ln">  frontend<span class="tk-o">:</span> [<span class="tk-s">"React"</span>, <span class="tk-s">"TypeScript"</span>],</span><span class="ln">  databases<span class="tk-o">:</span> [<span class="tk-s">"MySQL"</span>, <span class="tk-s">"PostgreSQL"</span>],</span><span class="ln">  focus<span class="tk-o">:</span> <span class="tk-s">"Gov &amp; enterprise systems"</span>,</span><span class="ln">  security<span class="tk-o">:</span> <span class="tk-s">"VAPT remediation"</span>,</span><span class="ln">  </span><span class="ln">};</span></pre>
+                            <div class="editor-foot"><span><i class="fa fa-code-branch me-1"></i>main</span><span>TypeScript · UTF-8</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="stats">
+                <div class="stat reveal"><strong><span data-count="3">3</span><sup>+</sup></strong><span>Years experience</span></div>
+                <div class="stat reveal" style="--d:.08s"><strong><span data-count="6">6</span><sup>+</sup></strong><span>Enterprise systems</span></div>
+                <div class="stat reveal" style="--d:.16s"><strong><span data-count="10">10</span><sup>+</sup></strong><span>Projects delivered</span></div>
+                <div class="stat reveal" style="--d:.24s"><strong><span data-count="3.62">3.62</span></strong><span>CGPA · Dean's List</span></div>
+            </div>
         </div>
-    </div>
+    </header>
     <!-- Header End -->
 
 
     <!-- About Start -->
-    <div class="container-xxl py-6" id="about">
+    <section class="section section-alt" id="about">
         <div class="container">
-            <div class="row g-5 align-items-center">
-
-                <!-- LEFT -->
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="years flex-shrink-0 text-center me-4">
-                            <h1 class="display-1 mb-0">3</h1>
-                            <h6 class="mb-0">Years Experience</h6>
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <span class="eyebrow reveal">01 — about</span>
+                    <div class="years reveal">
+                        <div>
+                            <div class="big">3</div>
+                            <div class="label">Years</div>
                         </div>
-                        <h3 class="lh-base mb-0">
-                            Software Developer specializing in Web & System Development
-                        </h3>
+                        <h2>Software Developer specializing in web &amp; system development</h2>
                     </div>
-
-                    <p class="mb-4">
+                    <p class="about-text reveal">
                         I am a <strong>Software Developer with 3+ years of experience</strong> in developing
                         enterprise systems, web applications, and RESTful APIs for Malaysian government agencies
                         and local authorities. I specialize in <strong>Laravel, Laravel Lumen, PHP, React.js, TypeScript</strong>
                         and modern database-driven applications.
                     </p>
-
-                    <p class="mb-3">
-                        <i class="far fa-check-circle text-primary me-3"></i>
-                        Strong experience in MVC architecture & Agile development
-                    </p>
-                    <p class="mb-3">
-                        <i class="far fa-check-circle text-primary me-3"></i>
-                        Experienced in REST API integration & system optimization
-                    </p>
-                    <p class="mb-3">
-                        <i class="far fa-check-circle text-primary me-3"></i>
-                        Uses AI coding assistants (Claude, Codex, Gemini) to speed up development, with manual review before every code review
-                    </p>
-                    <p class="mb-3">
-                        <i class="far fa-check-circle text-primary me-3"></i>
-                        Remediates security vulnerabilities from third-party VAPT reports as the development vendor
-                    </p>
-                    <p class="mb-3">
-                        <i class="far fa-check-circle text-primary me-3"></i>
-                        Comfortable working in team-based and client-facing environments
-                    </p>
-
-                    <a class="btn btn-primary py-3 px-5 mt-3" href="cv/AdriyatolAfrina-CV.pdf" target="_blank">
-                        <i class="fa fa-download me-2"></i>Download Resume
-                    </a>
+                    <ul class="checklist reveal">
+                        <li>Strong experience in MVC architecture &amp; Agile development</li>
+                        <li>Experienced in REST API integration &amp; system optimization</li>
+                        <li>Uses AI coding assistants (Claude, Codex, Gemini) to speed up development, with manual review before every code review</li>
+                        <li>Remediates security vulnerabilities from third-party VAPT reports as the development vendor</li>
+                        <li>Comfortable working in team-based and client-facing environments</li>
+                    </ul>
                 </div>
-
-                <!-- RIGHT -->
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-
-                    <!-- Tech Stack -->
-                    <h5 class="mb-3">Tech Stack</h5>
-                    <div class="mb-4">
-                        <span class="badge bg-primary me-1 mb-1">Laravel</span>
-                        <span class="badge bg-primary me-1 mb-1">Laravel Lumen</span>
-                        <span class="badge bg-primary me-1 mb-1">PHP</span>
-                        <span class="badge bg-primary me-1 mb-1">React.js</span>
-                        <span class="badge bg-primary me-1 mb-1">TypeScript</span>
-                        <span class="badge bg-primary me-1 mb-1">JavaScript</span>
-                        <span class="badge bg-primary me-1 mb-1">HTML</span>
-                        <span class="badge bg-primary me-1 mb-1">CSS</span>
-                        <span class="badge bg-primary me-1 mb-1">Tailwind CSS</span>
-                        <span class="badge bg-primary me-1 mb-1">REST API</span>
-                        <span class="badge bg-primary me-1 mb-1">MySQL</span>
-                        <span class="badge bg-primary me-1 mb-1">PostgreSQL</span>
-                        <span class="badge bg-primary me-1 mb-1">Git</span>
-                        <span class="badge bg-success me-1 mb-1">AI-Assisted Dev</span>
-                        <span class="badge bg-danger me-1 mb-1">Security Hardening</span>
+                <div class="col-lg-5">
+                    <div class="fact-card reveal" style="--d:.1s">
+                        <div class="fact">
+                            <div class="fact-head"><h3>Enterprise Systems</h3><strong>6+</strong></div>
+                            <p>Large-scale government and enterprise systems including ASCDM (Booking4U, ePenilaian, CTMG), Permit Awning System (MBJB), AKSES, and MYCFO.</p>
+                        </div>
+                        <div class="fact">
+                            <div class="fact-head"><h3>Projects Delivered</h3><strong>10+</strong></div>
+                            <p>Full-cycle development from requirement gathering to UAT, FAT &amp; PAT.</p>
+                        </div>
+                        <div class="fact">
+                            <div class="fact-head"><h3>Tech Stack</h3></div>
+                            <ul class="tags mt-3">
+                                <li class="tag">Laravel</li>
+                                <li class="tag">Laravel Lumen</li>
+                                <li class="tag">PHP</li>
+                                <li class="tag">React.js</li>
+                                <li class="tag">TypeScript</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">HTML</li>
+                                <li class="tag">CSS</li>
+                                <li class="tag">Tailwind CSS</li>
+                                <li class="tag">REST API</li>
+                                <li class="tag">MySQL</li>
+                                <li class="tag">PostgreSQL</li>
+                                <li class="tag">Git</li>
+                                <li class="tag tag-accent">AI-Assisted Dev</li>
+                                <li class="tag tag-accent">Security Hardening</li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <!-- Highlights -->
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">Enterprise Systems</h5>
-                        <h2 class="text-primary fw-bold mb-0">6+</h2>
-                    </div>
-                    <p class="mb-4">
-                        Experience working on large-scale government and enterprise systems
-                        including ASCDM (Booking4U, ePenilaian, CTMG), Permit Awning System (MBJB), AKSES, and MYCFO.
-                    </p>
-
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">Projects Delivered</h5>
-                        <h2 class="text-primary fw-bold mb-0">10+</h2>
-                    </div>
-                    <p class="mb-0">
-                        Delivered full-cycle development from requirement gathering to UAT, FAT & PAT.
-                    </p>
                 </div>
-
             </div>
         </div>
-    </div>
+    </section>
     <!-- About End -->
 
-    <!-- Expertise Start -->
-    <div class="container-xxl py-6 pb-5" id="skill">
+
+    <!-- Skills Start -->
+    <section class="section" id="skill">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5">Skills & Experience</h1>
-                    <h3 class="mb-4">My Skills</h3>
-                    <div class="row">
-
-                        <!-- Advanced -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card shadow h-100 border-0">
-                                <div class="card-body">
-                                    <h4 class="card-title text-primary fw-bold">🚀 Advanced</h4>
-                                    <p class="text-muted">Highly proficient with real-world experience</p>
-
-                                    <div class="mb-3">
-                                        <span class="badge bg-primary me-1 mb-1">Laravel Lumen</span>
-                                        <span class="badge bg-primary me-1 mb-1">Laravel</span>
-                                        <span class="badge bg-primary me-1 mb-1">PHP</span>
-                                        <span class="badge bg-primary me-1 mb-1">React.js</span>
-                                        <span class="badge bg-primary me-1 mb-1">TypeScript</span>
-                                        <span class="badge bg-primary me-1 mb-1">HTML</span>
-                                        <span class="badge bg-primary me-1 mb-1">CSS</span>
-                                        <span class="badge bg-primary me-1 mb-1">JavaScript</span>
-                                        <span class="badge bg-primary me-1 mb-1">jQuery</span>
-                                        <span class="badge bg-primary me-1 mb-1">REST APIs</span>
-                                        <span class="badge bg-primary me-1 mb-1">SQL</span>
-                                        <span class="badge bg-primary me-1 mb-1">MySQL</span>
-                                        <span class="badge bg-primary me-1 mb-1">PostgreSQL</span>
-                                        <span class="badge bg-primary me-1 mb-1">Security Hardening</span>
-                                    </div>
-
-                                    <div class="progress" style="height: 20px;">
-                                        <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated d-flex align-items-center justify-content-center"
-                                            style="width:95%">
-                                            Advanced Level
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Experienced -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card shadow h-100 border-0">
-                                <div class="card-body">
-                                    <h4 class="card-title text-warning fw-bold">💡 Experienced</h4>
-                                    <p class="text-muted">Strong understanding with project exposure</p>
-
-                                    <div class="mb-3">
-                                        <span class="badge bg-warning text-dark me-1 mb-1">Tailwind CSS</span>
-                                        <span class="badge bg-warning text-dark me-1 mb-1">Bootstrap</span>
-                                        <span class="badge bg-warning text-dark me-1 mb-1">Git</span>
-                                        <span class="badge bg-warning text-dark me-1 mb-1">MVC Architecture</span>
-                                        <span class="badge bg-warning text-dark me-1 mb-1">Agile / SDLC</span>
-                                        <span class="badge bg-warning text-dark me-1 mb-1">C++</span>
-                                        <span class="badge bg-warning text-dark me-1 mb-1">AI-Assisted Development (Claude, Codex, Gemini)</span>
-                                    </div>
-
-                                    <div class="progress" style="height: 20px;">
-                                        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated d-flex align-items-center justify-content-center"
-                                            style="width:80%">
-                                            Experienced Level
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Familiar -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card shadow h-100 border-0">
-                                <div class="card-body">
-                                    <h4 class="card-title text-info fw-bold">🔎 Familiar</h4>
-                                    <p class="text-muted">Working knowledge, actively exploring</p>
-
-                                    <div class="mb-3">
-                                        <span class="badge bg-info text-dark me-1 mb-1">Node.js</span>
-                                        <span class="badge bg-info text-dark me-1 mb-1">Next.js</span>
-                                        <span class="badge bg-info text-dark me-1 mb-1">AWS Infrastructure</span>
-                                        <span class="badge bg-info text-dark me-1 mb-1">AWS Bedrock</span>
-                                        <span class="badge bg-info text-dark me-1 mb-1">Kiro</span>
-                                        <span class="badge bg-info text-dark me-1 mb-1">Amazon Quick</span>
-                                        <span class="badge bg-info text-dark me-1 mb-1">Burp Suite</span>
-                                        <span class="badge bg-info text-dark me-1 mb-1">Java</span>
-                                    </div>
-
-                                    <div class="progress" style="height: 20px;">
-                                        <div class="progress-bar bg-info progress-bar-striped progress-bar-animated d-flex align-items-center justify-content-center"
-                                            style="width:55%">
-                                            Familiar Level
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tools -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card shadow h-100 border-0">
-                                <div class="card-body">
-                                    <h4 class="card-title text-success fw-bold">🎨 Tools</h4>
-                                    <p class="text-muted">Design & productivity tools</p>
-
-                                    <div class="mb-3">
-                                        <span class="badge bg-success me-1 mb-1">Microsoft Office</span>
-                                        <span class="badge bg-success me-1 mb-1">Canva</span>
-                                        <span class="badge bg-success me-1 mb-1">Adobe Photoshop</span>
-                                        <span class="badge bg-success me-1 mb-1">Adobe Premiere Pro</span>
-                                        <span class="badge bg-success me-1 mb-1">Adobe Illustrator</span>
-                                    </div>
-
-                                    <div class="progress" style="height: 20px;">
-                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated d-flex align-items-center justify-content-center"
-                                            style="width:60%">
-                                            Comfortable
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+            <div class="section-head">
+                <span class="eyebrow reveal">02 — skills</span>
+                <h2 class="section-title reveal">Technical skills <span class="soft">by depth of experience.</span></h2>
+                <p class="section-lead reveal">What I use daily in production, what I've shipped on projects, and what I'm currently exploring.</p>
+            </div>
+            <div class="bento">
+                <div class="skill-card spot span-7 reveal">
+                    <div class="skill-top">
+                        <h3><span class="skill-icon"><i class="fa fa-rocket"></i></span>Advanced</h3>
+                        <div class="meter-seg" aria-label="Level 5 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><span class="lvl">daily use</span></div>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
-                        </li>
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
-                        </li>
+                    <p>Highly proficient with real-world experience</p>
+                    <ul class="tags">
+                        <li class="tag tag-accent">Laravel Lumen</li>
+                        <li class="tag tag-accent">Laravel</li>
+                        <li class="tag tag-accent">PHP</li>
+                        <li class="tag tag-accent">React.js</li>
+                        <li class="tag tag-accent">TypeScript</li>
+                        <li class="tag tag-accent">HTML</li>
+                        <li class="tag tag-accent">CSS</li>
+                        <li class="tag tag-accent">JavaScript</li>
+                        <li class="tag tag-accent">jQuery</li>
+                        <li class="tag tag-accent">REST APIs</li>
+                        <li class="tag tag-accent">SQL</li>
+                        <li class="tag tag-accent">MySQL</li>
+                        <li class="tag tag-accent">PostgreSQL</li>
+                        <li class="tag tag-accent">Security Hardening</li>
                     </ul>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <span class="timeline-date">May 2023 – Present</span>
-                                        <h5>Software Developer</h5>
-                                        <h6>Olive Intelligent Management Sdn. Bhd</h6>
-                                        <p>Developing and maintaining full-stack web applications and databases for government clients, using AI coding assistants to speed up delivery and remediating security vulnerabilities from third-party VAPT reports.</p>
-                                    </div>
-                                </div>
-
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <span class="timeline-date">Oct 2022 – Mar 2023</span>
-                                        <h5>Information Technology Intern</h5>
-                                        <h6>National Institute of Public Administration (INTAN)</h6>
-                                        <p>Provided IT support, system documentation, and assisted in system maintenance.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade p-0">
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <div class="timeline-dot">
-                                        <i class="bi bi-mortarboard-fill"></i>
-                                    </div>
-                                    <div class="timeline-content">
-                                        <span class="timeline-date">Sep 2019 – Mar 2023</span>
-                                        <h5>Bachelor of Computer Science (Database Management) (Hons)</h5>
-                                        <h6>Universiti Teknikal Malaysia Melaka</h6>
-
-                                        <p class="mb-1">
-                                            <strong>CGPA:</strong>
-                                            <span class="text-primary fw-bold">3.62</span>
-                                        </p>
-
-                                        <span class="badge bg-primary">
-                                            Dean's List (Sem 2 – 7)
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="timeline-dot">
-                                    </div>
-                                    <div class="timeline-content">
-                                        <span class="timeline-date">2018 – 2019</span>
-                                        <h5>Science PST Module II</h5>
-                                        <h6>Kedah Matriculation College</h6>
-
-                                        <p class="mb-0">
-                                            <strong>CGPA:</strong>
-                                            <span class="text-primary fw-bold">3.08</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="skill-card spot span-5 reveal" style="--d:.08s">
+                    <div class="skill-top">
+                        <h3><span class="skill-icon"><i class="fa fa-lightbulb"></i></span>Experienced</h3>
+                        <div class="meter-seg" aria-label="Level 4 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><span class="lvl">project use</span></div>
                     </div>
+                    <p>Strong understanding with project exposure</p>
+                    <ul class="tags">
+                        <li class="tag">Tailwind CSS</li>
+                        <li class="tag">Bootstrap</li>
+                        <li class="tag">Git</li>
+                        <li class="tag">MVC Architecture</li>
+                        <li class="tag">Agile / SDLC</li>
+                        <li class="tag">C++</li>
+                        <li class="tag">AI-Assisted Development (Claude, Codex, Gemini)</li>
+                    </ul>
+                </div>
+                <div class="skill-card spot span-5 reveal">
+                    <div class="skill-top">
+                        <h3><span class="skill-icon"><i class="fa fa-search"></i></span>Familiar</h3>
+                        <div class="meter-seg" aria-label="Level 3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><span class="lvl">exploring</span></div>
+                    </div>
+                    <p>Working knowledge, actively exploring</p>
+                    <ul class="tags">
+                        <li class="tag">Node.js</li>
+                        <li class="tag">Next.js</li>
+                        <li class="tag">AWS Infrastructure</li>
+                        <li class="tag">AWS Bedrock</li>
+                        <li class="tag">Kiro</li>
+                        <li class="tag">Amazon Quick</li>
+                        <li class="tag">Burp Suite</li>
+                        <li class="tag">Java</li>
+                    </ul>
+                </div>
+                <div class="skill-card spot span-7 reveal" style="--d:.08s">
+                    <div class="skill-top">
+                        <h3><span class="skill-icon"><i class="fa fa-palette"></i></span>Tools</h3>
+                        <div class="meter-seg" aria-label="Comfortable"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><span class="lvl">comfortable</span></div>
+                    </div>
+                    <p>Design &amp; productivity tools</p>
+                    <ul class="tags">
+                        <li class="tag">Microsoft Office</li>
+                        <li class="tag">Canva</li>
+                        <li class="tag">Adobe Photoshop</li>
+                        <li class="tag">Adobe Premiere Pro</li>
+                        <li class="tag">Adobe Illustrator</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Expertise End -->
+    </section>
+    <!-- Skills End -->
 
 
-    <!-- Service Start -->
-    <div class="container-fluid bg-light my-5 py-6" id="service">
+    <!-- Experience Start -->
+    <section class="section section-alt" id="service">
         <div class="container">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Work Experience</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <a class="btn btn-primary py-3 px-5" href="#contact">Hire Me</a>
-                </div>
+            <div class="section-head">
+                <span class="eyebrow reveal">03 — experience</span>
+                <h2 class="section-title reveal">Work experience <span class="soft">&amp; education.</span></h2>
+                <p class="section-lead reveal">Building and supporting systems used by government agencies, from first requirement to final acceptance.</p>
             </div>
-            <div class="container py-5">
 
+            <div class="timeline">
+                <div class="timeline-fill" aria-hidden="true"></div>
 
-                <div class="row g-4">
-
-                    <!-- Olive Intelligent Management -->
-                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item bg-white rounded shadow h-100 p-4 p-lg-5">
-
-                            <!-- Header -->
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-icon me-3">
-                                    <i class="fa fa-code fa-2x text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="mb-0">Software Developer</h4>
-                                    <small class="text-muted">
-                                        <i class="fa fa-building me-1"></i>
-                                        Olive Intelligent Management Sdn. Bhd
-                                    </small>
-                                </div>
+                <!-- Olive Intelligent Management -->
+                <article class="job reveal">
+                    <span class="job-dot" aria-hidden="true"></span>
+                    <div class="job-card spot">
+                        <div class="job-head">
+                            <div>
+                                <h3>Software Developer</h3>
+                                <div class="org"><i class="fa fa-building"></i>Olive Intelligent Management Sdn. Bhd</div>
                             </div>
+                            <span class="when"><span class="live"></span>May 2023 – Present</span>
+                        </div>
+                        <p>
+                            Developing and maintaining enterprise systems and web applications for Malaysian
+                            government agencies and local authorities, using modern backend and frontend
+                            technologies alongside AI-assisted development and security vulnerability remediation.
+                        </p>
+                        <ul class="tags">
+                            <li class="tag">Laravel</li>
+                            <li class="tag">Laravel Lumen</li>
+                            <li class="tag">PHP</li>
+                            <li class="tag">React.js</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">Tailwind CSS</li>
+                            <li class="tag">REST APIs</li>
+                            <li class="tag">jQuery</li>
+                            <li class="tag">JSON</li>
+                            <li class="tag">MySQL</li>
+                            <li class="tag">PostgreSQL</li>
+                            <li class="tag tag-accent">AI-Assisted Dev</li>
+                            <li class="tag tag-accent">Security Hardening</li>
+                        </ul>
 
-                            <!-- Description -->
-                            <p class="mt-3">
-                                Developing and maintaining enterprise systems and web applications for Malaysian
-                                government agencies and local authorities, using
-                                <strong>modern backend and frontend technologies</strong> alongside AI-assisted
-                                development and security vulnerability remediation.
-                            </p>
+                        <h4>Responsibilities</h4>
+                        <ul class="bullets">
+                            <li>Actively involved in the full software development lifecycle, from requirement analysis and system design to development, testing, deployment, and maintenance.</li>
+                            <li>Developed and maintained scalable web applications and systems using Laravel Lumen, Laravel, PHP, React.js, TypeScript, JavaScript, HTML, CSS, REST APIs, jQuery, JSON, and SQL.</li>
+                            <li>Designed and implemented RESTful APIs and backend services based on project and business requirements, ensuring smooth communication between front-end and back-end services.</li>
+                            <li>Remediated security vulnerabilities identified in third-party VAPT (Vulnerability Assessment and Penetration Testing) reports across multiple government systems, acting as the development vendor responsible for fixes.</li>
+                            <li>Supported UAT (User Acceptance Testing) and FAT (Final Acceptance Testing) sessions directly with clients, including Majlis Bandaraya Johor Bahru (MBJB), resolving client-reported bugs and issues to ensure system stability.</li>
+                        </ul>
+                        <div class="more-wrap" id="olive-more">
+                            <ul class="bullets" aria-hidden="true">
+                                <li>Identified, troubleshot, and resolved software bugs, performance issues, and system defects to improve application stability and efficiency.</li>
+                                <li>Performed comprehensive testing and debugging to ensure high-quality and reliable software delivery.</li>
+                                <li>Designed and managed database schemas, wrote optimized SQL queries, and integrated applications with MySQL and PostgreSQL databases.</li>
+                                <li>Applied MVC architecture and best coding practices to ensure clean, maintainable, and scalable codebases.</li>
+                                <li>Optimized existing code to improve system performance, response time, and memory usage.</li>
+                                <li>Used AI coding assistants (Claude, Codex, Gemini) for code generation, refactoring, unit test writing and debugging, with manual review before every code review.</li>
+                                <li>Collaborated with team members in an Agile environment, conducting code reviews and providing constructive feedback.</li>
+                                <li>Prepared and maintained technical documentation, including URS, SRS, API documentation, and user manuals.</li>
+                                <li>Used Git for version control, branching, merging, and collaborative development.</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="more-toggle" data-target="#olive-more" aria-expanded="false" aria-controls="olive-more"
+                            data-more="show all responsibilities (+9)" data-less="show fewer"><span class="label">show all responsibilities (+9)</span><i class="fa fa-chevron-down"></i></button>
 
-                            <!-- Tech Badges -->
-                            <div class="mb-3">
-                                <span class="badge bg-primary me-1 mb-1">Laravel</span>
-                                <span class="badge bg-primary me-1 mb-1">Laravel Lumen</span>
-                                <span class="badge bg-primary me-1 mb-1">PHP</span>
-                                <span class="badge bg-primary me-1 mb-1">React.js</span>
-                                <span class="badge bg-primary me-1 mb-1">TypeScript</span>
-                                <span class="badge bg-primary me-1 mb-1">JavaScript</span>
-                                <span class="badge bg-primary me-1 mb-1">HTML</span>
-                                <span class="badge bg-primary me-1 mb-1">CSS</span>
-                                <span class="badge bg-primary me-1 mb-1">Tailwind CSS</span>
-                                <span class="badge bg-primary me-1 mb-1">REST APIs</span>
-                                <span class="badge bg-primary me-1 mb-1">jQuery</span>
-                                <span class="badge bg-primary me-1 mb-1">JSON</span>
-                                <span class="badge bg-primary me-1 mb-1">MySQL</span>
-                                <span class="badge bg-primary me-1 mb-1">PostgreSQL</span>
-                                <span class="badge bg-success me-1 mb-1">AI-Assisted Dev</span>
-                                <span class="badge bg-danger me-1 mb-1">Security Hardening</span>
+                        <h4>Key Projects</h4>
+                        <div class="key-projects">
+                            <div class="key-project">
+                                <h5>ASCDM</h5>
+                                <ul>
+                                    <li>Booking4U – Maintenance &amp; reporting module</li>
+                                    <li>ePenilaian – Survey feedback (list, chart, Excel export), AWS server exposure</li>
+                                    <li>CTMG – REST API integration</li>
+                                </ul>
+                                <ul class="tags">
+                                    <li class="tag">Enterprise System</li>
+                                    <li class="tag tag-warn">VAPT Remediation</li>
+                                </ul>
                             </div>
-
-                            <!-- Responsibilities -->
-                            <ul class="mt-3">
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Actively involved in the full software development lifecycle, from requirement analysis and system design to development, testing, deployment, and maintenance.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Developed and maintained scalable web applications and systems using Laravel Lumen, Laravel, PHP, React.js, TypeScript, JavaScript, HTML, CSS, REST APIs, jQuery, JSON, and SQL.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Designed and implemented RESTful APIs and backend services based on project and business requirements, ensuring smooth communication between front-end and back-end services.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Identified, troubleshot, and resolved software bugs, performance issues, and system defects to improve application stability and efficiency.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Performed comprehensive testing and debugging to ensure high-quality and reliable software delivery.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Designed and managed database schemas, wrote optimized SQL queries, and integrated applications with MySQL and PostgreSQL databases.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Applied MVC architecture and best coding practices to ensure clean, maintainable, and scalable codebases.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Optimized existing code to improve system performance, response time, and memory usage.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Used AI coding assistants (Claude, Codex, Gemini) for code generation, refactoring, unit test writing and debugging, with manual review before every code review.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Remediated security vulnerabilities identified in third-party VAPT (Vulnerability Assessment and Penetration Testing) reports across multiple government systems, acting as the development vendor responsible for fixes.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Supported UAT (User Acceptance Testing) and FAT (Final Acceptance Testing) sessions directly with clients, including Majlis Bandaraya Johor Bahru (MBJB), resolving client-reported bugs and issues to ensure system stability.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Collaborated with team members in an Agile environment, conducting code reviews and providing constructive feedback.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Prepared and maintained technical documentation, including URS, SRS, API documentation, and user manuals.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Used Git for version control, branching, merging, and collaborative development.</li>
-                            </ul>
-
-                            <!-- Projects -->
-                            <h6 class="mt-4 fw-bold">
-                                <i class="fa fa-folder-open me-2 text-primary"></i>Key Projects
-                            </h6>
-
-                            <ul>
-                                <li>
-                                    <strong>ASCDM</strong>
-                                    <span class="badge bg-secondary ms-2">Enterprise System</span>
-                                    <span class="badge bg-danger ms-1">VAPT Remediation</span>
-                                    <ul>
-                                        <li>Booking4U – Maintenance & reporting module</li>
-                                        <li>ePenilaian – Survey feedback (list, chart, Excel export), AWS server exposure</li>
-                                        <li>CTMG – REST API integration</li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <strong>Permit Awning System</strong>
-                                    <span class="badge bg-warning text-dark ms-2">UAT / FAT</span>
-                                    – Full stack development & maintenance, client meetings with MBJB
-                                </li>
-
-                                <li>
-                                    <strong>AKSES</strong>
-                                    <span class="badge bg-info text-dark ms-2">Laravel + PostgreSQL</span>
-                                    <span class="badge bg-danger ms-1">VAPT Remediation</span>
-                                    – Spatie roles & permissions, activity logging, Agile development
-                                </li>
-
-                                <li>
-                                    <strong>MYCFO</strong>
-                                    <span class="badge bg-primary ms-2">React.js</span>
-                                    <span class="badge bg-primary ms-1">TypeScript</span>
-                                    <span class="badge bg-primary ms-1">Laravel</span>
-                                    <span class="badge bg-warning text-dark ms-1">UAT / FAT / PAT</span>
-                                    – Full stack development, responsive UI with Tailwind CSS
-                                </li>
-                            </ul>
-
+                            <div class="key-project">
+                                <h5>Permit Awning System</h5>
+                                <p>Full stack development &amp; maintenance, client meetings with MBJB.</p>
+                                <ul class="tags">
+                                    <li class="tag tag-info">UAT / FAT</li>
+                                </ul>
+                            </div>
+                            <div class="key-project">
+                                <h5>AKSES</h5>
+                                <p>Spatie roles &amp; permissions, activity logging, Agile development.</p>
+                                <ul class="tags">
+                                    <li class="tag">Laravel + PostgreSQL</li>
+                                    <li class="tag tag-warn">VAPT Remediation</li>
+                                </ul>
+                            </div>
+                            <div class="key-project">
+                                <h5>MYCFO</h5>
+                                <p>Full stack development, responsive UI with Tailwind CSS.</p>
+                                <ul class="tags">
+                                    <li class="tag">React.js</li>
+                                    <li class="tag">TypeScript</li>
+                                    <li class="tag">Laravel</li>
+                                    <li class="tag tag-info">UAT / FAT / PAT</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                </article>
 
-                    <!-- INTAN Internship -->
-                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item bg-white rounded shadow h-100 p-4 p-lg-5">
-
-                            <!-- Header -->
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="bg-icon me-3">
-                                    <i class="fa fa-laptop fa-2x text-success"></i>
-                                </div>
-                                <div>
-                                    <h4 class="mb-0">IT Intern</h4>
-                                    <small class="text-muted">
-                                        <i class="fa fa-university me-1"></i>
-                                        National Institute of Public Administration (INTAN)
-                                    </small>
-                                </div>
+                <!-- INTAN Internship -->
+                <article class="job reveal">
+                    <span class="job-dot" aria-hidden="true"></span>
+                    <div class="job-card spot">
+                        <div class="job-head">
+                            <div>
+                                <h3>Information Technology Intern</h3>
+                                <div class="org"><i class="fa fa-university"></i>National Institute of Public Administration (INTAN)</div>
                             </div>
-
-                            <!-- Tech Badges -->
-                            <div class="mb-3">
-                                <span class="badge bg-success me-1 mb-1">PHP</span>
-                                <span class="badge bg-success me-1 mb-1">HTML</span>
-                                <span class="badge bg-success me-1 mb-1">CSS</span>
-                                <span class="badge bg-success me-1 mb-1">JavaScript</span>
-                                <span class="badge bg-success me-1 mb-1">phpMyAdmin</span>
-                            </div>
-
-                            <ul class="mt-3">
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Tested system modules and fixed implementation issues.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Improved UI for iAdmin and INTURA One Stop.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Gathered user requirements and converted them into features.</li>
-                                <li><i class="fa fa-check-circle text-success me-2"></i>Managed ICT setup for seminars and live streaming.</li>
-                            </ul>
-
-                            <h6 class="mt-4 fw-bold">
-                                <i class="fa fa-project-diagram me-2 text-success"></i>Main Internship Project
-                            </h6>
-
-                            <p>
-                                <strong>iJadual System</strong> – Calendar-based timetable system for staff using PHP and JavaScript.
-                            </p>
-
+                            <span class="when">Oct 2022 – Mar 2023</span>
                         </div>
+                        <ul class="tags">
+                            <li class="tag">PHP</li>
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">phpMyAdmin</li>
+                        </ul>
+                        <h4>Responsibilities</h4>
+                        <ul class="bullets">
+                            <li>Tested system modules and fixed implementation issues.</li>
+                            <li>Improved UI for iAdmin and INTURA One Stop.</li>
+                            <li>Gathered user requirements and converted them into features.</li>
+                            <li>Managed ICT setup for seminars and live streaming.</li>
+                            <li>Provided IT support, system documentation, and assisted in system maintenance.</li>
+                        </ul>
+                        <h4>Main Internship Project</h4>
+                        <p class="mb-0"><strong>iJadual System</strong> – Calendar-based timetable system for staff using PHP and JavaScript.</p>
                     </div>
+                </article>
+            </div>
 
+            <!-- Education -->
+            <h3 class="edu-title reveal"><i class="fa fa-graduation-cap"></i>Education</h3>
+            <div class="row g-4">
+                <div class="col-md-6 reveal">
+                    <div class="edu spot">
+                        <span class="when">Sep 2019 – Mar 2023</span>
+                        <h3>Bachelor of Computer Science (Database Management) (Hons)</h3>
+                        <div class="school">Universiti Teknikal Malaysia Melaka</div>
+                        <div class="gpa"><strong>3.62</strong><span>CGPA</span></div>
+                        <ul class="tags">
+                            <li class="tag tag-accent">Dean's List (Sem 2 – 7)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal" style="--d:.08s">
+                    <div class="edu spot">
+                        <span class="when">2018 – 2019</span>
+                        <h3>Science PST Module II</h3>
+                        <div class="school">Kedah Matriculation College</div>
+                        <div class="gpa"><strong>3.08</strong><span>CGPA</span></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Service End -->
+    </section>
+    <!-- Experience End -->
 
-    
 
     <!-- Projects Start -->
-    <div class="container-xxl py-6 pt-5" id="project">
-        <div class="container">
-            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Projects</h1>
-                    <p class="text-muted mt-2">Real-world systems I have worked on</p>
+    <section class="section section-dark" id="project">
+        <div class="container position-relative">
+            <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3">
+                <div>
+                    <span class="eyebrow reveal">04 — projects</span>
+                    <h2 class="section-title reveal">Selected work <span class="soft">in production.</span></h2>
+                    <p class="section-lead reveal">Real-world systems I have worked on, plus earlier academic projects.</p>
                 </div>
-                <div class="col-lg-6 text-lg-end">
-                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                        <li class="mx-3 active" data-filter="*">All</li>
-                        <li class="mx-3" data-filter=".web">Web Systems</li>
-                        <li class="mx-3" data-filter=".academic">Academic Projects</li>
-
-                    </ul>
+                <div class="filters reveal" role="group" aria-label="Filter projects">
+                    <span class="pill" aria-hidden="true"></span>
+                    <button type="button" class="active" data-filter="*" aria-pressed="true">All</button>
+                    <button type="button" data-filter="web" aria-pressed="false">Web Systems</button>
+                    <button type="button" data-filter="academic" aria-pressed="false">Academic</button>
                 </div>
             </div>
 
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-4">
 
                 <!-- Booking4U -->
-                <div class="col-lg-4 col-md-6 portfolio-item web">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-fasiliti.jpeg" alt="Booking4U">
-
-                        <div class="portfolio-overlay">
-                            <h5>Booking4U</h5>
-                            <p>Facility Booking System</p>
-
-                            <div class="mb-2">
-                                <span class="badge bg-primary">Laravel Lumen</span>
-                                <span class="badge bg-primary">MySQL</span>
-                                <span class="badge bg-primary">Bootstrap</span>
-                                <span class="badge bg-primary">jQuery</span>
-                            </div>
-
-                            <div class="portfolio-btn">
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="img/project-fasiliti.jpeg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="https://admin.booking4u.intan.my/login/" target="_blank">
-                                    <i class="fa fa-link"></i>
-                                </a>
+                <div class="col-lg-4 col-md-6 project-item web reveal">
+                    <article class="project spot">
+                        <div class="browser">
+                            <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="browser-url"><i class="fa fa-lock"></i>admin.booking4u.intan.my</span></div>
+                            <a class="browser-view" href="img/project-fasiliti.jpeg" data-lightbox="portfolio" data-title="Booking4U — Facility Booking System">
+                                <img src="img/project-fasiliti.jpeg" alt="Booking4U login screen" loading="lazy">
+                                <span class="zoom"><span><i class="fa fa-expand me-2"></i>view screenshot</span></span>
+                            </a>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta">ASCDM · INTAN</div>
+                            <h3>Booking4U</h3>
+                            <p>Facility Booking System — maintenance &amp; reporting module.</p>
+                            <ul class="tags">
+                                <li class="tag">Laravel Lumen</li>
+                                <li class="tag">MySQL</li>
+                                <li class="tag">Bootstrap</li>
+                                <li class="tag">jQuery</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://admin.booking4u.intan.my/login/" target="_blank" rel="noopener">Visit live site <i class="fa fa-arrow-right ms-1 small" style="transform:rotate(-45deg)"></i></a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- ePenilaian -->
-                <div class="col-lg-4 col-md-6 portfolio-item web">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-penilaian.jpeg" alt="ePenilaian">
-
-                        <div class="portfolio-overlay">
-                            <h5> Sistem ePenilaian</h5>
-                            <p>Online Evaluation System</p>
-
-                            <div class="mb-2">
-                                <span class="badge bg-primary">Laravel Lumen</span>
-                                <span class="badge bg-primary">MySQL</span>
-                                <span class="badge bg-primary">Bootstrap</span>
-                                <span class="badge bg-primary">AWS</span>
-                                <span class="badge bg-primary">jQuery</span>
-
-                            </div>
-
-                            <div class="portfolio-btn">
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="img/project-penilaian.jpeg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="https://admin.epenilaian.intan.my/login/" target="_blank">
-                                    <i class="fa fa-link"></i>
-                                </a>
+                <div class="col-lg-4 col-md-6 project-item web reveal" style="--d:.08s">
+                    <article class="project spot">
+                        <div class="browser">
+                            <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="browser-url"><i class="fa fa-lock"></i>admin.epenilaian.intan.my</span></div>
+                            <a class="browser-view" href="img/project-penilaian.jpeg" data-lightbox="portfolio" data-title="Sistem ePenilaian — Online Evaluation System">
+                                <img src="img/project-penilaian.jpeg" alt="ePenilaian login screen" loading="lazy">
+                                <span class="zoom"><span><i class="fa fa-expand me-2"></i>view screenshot</span></span>
+                            </a>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta">ASCDM · INTAN</div>
+                            <h3>Sistem ePenilaian</h3>
+                            <p>Online Evaluation System — survey feedback lists, charts and Excel export.</p>
+                            <ul class="tags">
+                                <li class="tag">Laravel Lumen</li>
+                                <li class="tag">MySQL</li>
+                                <li class="tag">Bootstrap</li>
+                                <li class="tag">AWS</li>
+                                <li class="tag">jQuery</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://admin.epenilaian.intan.my/login/" target="_blank" rel="noopener">Visit live site <i class="fa fa-arrow-right ms-1 small" style="transform:rotate(-45deg)"></i></a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- AKSES -->
-                <div class="col-lg-4 col-md-6 portfolio-item web">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/profil-akses.jpeg" alt="AKSES">
-
-                        <div class="portfolio-overlay">
-                            <h5>AKSES</h5>
-                            <p>Aplikasi KitaSelangor Sepadu</p>
-
-                            <div class="mb-2">
-                                <span class="badge bg-primary">Laravel</span>
-                                <span class="badge bg-primary">REST API</span>
-                                <span class="badge bg-primary">PostgreSQL</span>
-                                <span class="badge bg-danger">VAPT Remediation</span>
-                            </div>
-
-                            <div class="portfolio-btn">
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="img/profil-akses.jpeg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="https://akses.selangor.gov.my/" target="_blank">
-                                    <i class="fa fa-link"></i>
-                                </a>
+                <div class="col-lg-4 col-md-6 project-item web reveal" style="--d:.16s">
+                    <article class="project spot">
+                        <div class="browser">
+                            <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="browser-url"><i class="fa fa-lock"></i>akses.selangor.gov.my</span></div>
+                            <a class="browser-view" href="img/profil-akses.jpeg" data-lightbox="portfolio" data-title="AKSES — Aplikasi KitaSelangor Sepadu">
+                                <img src="img/profil-akses.jpeg" alt="AKSES application screen" loading="lazy">
+                                <span class="zoom"><span><i class="fa fa-expand me-2"></i>view screenshot</span></span>
+                            </a>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta">Selangor State Government</div>
+                            <h3>AKSES</h3>
+                            <p>Aplikasi KitaSelangor Sepadu — roles &amp; permissions, activity logging.</p>
+                            <ul class="tags">
+                                <li class="tag">Laravel</li>
+                                <li class="tag">REST API</li>
+                                <li class="tag">PostgreSQL</li>
+                                <li class="tag tag-warn">VAPT Remediation</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://akses.selangor.gov.my/" target="_blank" rel="noopener">Visit live site <i class="fa fa-arrow-right ms-1 small" style="transform:rotate(-45deg)"></i></a>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- CTMG -->
-                <div class="col-lg-4 col-md-6 portfolio-item web">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-ctmg.jpeg" alt="CTMG">
-
-                        <div class="portfolio-overlay">
-                            <h5>CTMG</h5>
-                            <p>Competency Tracking and Monitoring Gateway</p>
-
-                            <div class="mb-2">
-                                <span class="badge bg-primary">Laravel Lumen</span>
-                                <span class="badge bg-primary">REST API</span>
-                                <span class="badge bg-primary">Integration</span>
-                                <span class="badge bg-primary">jQuery</span>
-                            </div>
-
-                            <div class="portfolio-btn">
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="img/project-ctmg.jpeg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <!-- TODO: replace with CTMG's own live/demo link -->
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="#" target="_blank">
-                                    <i class="fa fa-link"></i>
-                                </a>
+                <div class="col-lg-4 col-md-6 project-item web reveal">
+                    <article class="project spot">
+                        <div class="browser">
+                            <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="browser-url"><i class="fa fa-lock"></i>ctmg · internal</span></div>
+                            <a class="browser-view" href="img/project-ctmg.jpeg" data-lightbox="portfolio" data-title="CTMG — Competency Tracking and Monitoring Gateway">
+                                <img src="img/project-ctmg.jpeg" alt="CTMG application screen" loading="lazy">
+                                <span class="zoom"><span><i class="fa fa-expand me-2"></i>view screenshot</span></span>
+                            </a>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta">ASCDM · INTAN</div>
+                            <h3>CTMG</h3>
+                            <p>Competency Tracking and Monitoring Gateway — REST API integration.</p>
+                            <ul class="tags">
+                                <li class="tag">Laravel Lumen</li>
+                                <li class="tag">REST API</li>
+                                <li class="tag">Integration</li>
+                                <li class="tag">jQuery</li>
+                            </ul>
+                            <div class="project-links">
+                                <!-- TODO: add CTMG's own live/demo link -->
+                                <span class="na"><i class="fa fa-lock"></i>internal system</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
+
                 <!-- MBJB -->
-                <div class="col-lg-4 col-md-6 portfolio-item web">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-mbjb.jpeg" alt="MBJB Permit Awning">
-
-                        <div class="portfolio-overlay">
-                            <h5>MBJB</h5>
-                            <p>Sistem Permit Awning</p>
-                            <div class="mb-2">
-                                <span class="badge bg-primary">Laravel Lumen</span>
-                                <span class="badge bg-primary">REST API</span>
-                                <span class="badge bg-primary">UAT / FAT</span>
-                            </div>
-
-                            <div class="portfolio-btn">
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="img/project-mbjb.jpeg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <!-- TODO: replace with Permit Awning's own live/demo link -->
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="#" target="_blank">
-                                    <i class="fa fa-link"></i>
-                                </a>
+                <div class="col-lg-4 col-md-6 project-item web reveal" style="--d:.08s">
+                    <article class="project spot">
+                        <div class="browser">
+                            <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="browser-url"><i class="fa fa-lock"></i>permit-awning · mbjb</span></div>
+                            <a class="browser-view" href="img/project-mbjb.jpeg" data-lightbox="portfolio" data-title="MBJB — Sistem Permit Awning">
+                                <img src="img/project-mbjb.jpeg" alt="MBJB Permit Awning screen" loading="lazy">
+                                <span class="zoom"><span><i class="fa fa-expand me-2"></i>view screenshot</span></span>
+                            </a>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta">Majlis Bandaraya Johor Bahru</div>
+                            <h3>Sistem Permit Awning</h3>
+                            <p>Full stack development &amp; maintenance, with UAT/FAT sessions alongside MBJB.</p>
+                            <ul class="tags">
+                                <li class="tag">Laravel Lumen</li>
+                                <li class="tag">REST API</li>
+                                <li class="tag tag-info">UAT / FAT</li>
+                            </ul>
+                            <div class="project-links">
+                                <!-- TODO: add Permit Awning's own live/demo link -->
+                                <span class="na"><i class="fa fa-lock"></i>internal system</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
+
                 <!-- MYCFO -->
-                <div class="col-lg-4 col-md-6 portfolio-item web">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <!-- TODO: replace with an actual MYCFO screenshot -->
-                        <img class="img-fluid" src="img/project-mycfo.jpeg" alt="MYCFO">
-
-                        <div class="portfolio-overlay">
-                            <h5>MYCFO</h5>
-                            <p>Client Financial Portal</p>
-                            <div class="mb-2">
-                                <span class="badge bg-primary">Laravel</span>
-                                <span class="badge bg-primary">React.js</span>
-                                <span class="badge bg-primary">TypeScript</span>
-                                <span class="badge bg-primary">Tailwind CSS</span>
-                                <span class="badge bg-warning text-dark">UAT / FAT / PAT</span>
-                            </div>
-
-                            <div class="portfolio-btn">
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="img/project-mycfo.jpeg" data-lightbox="portfolio">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <!-- TODO: replace with MYCFO's own live/demo link -->
-                                <a class="btn btn-sm btn-outline-light mx-1"
-                                href="#" target="_blank">
-                                    <i class="fa fa-link"></i>
-                                </a>
+                <div class="col-lg-4 col-md-6 project-item web reveal" style="--d:.16s">
+                    <article class="project spot">
+                        <div class="browser">
+                            <div class="browser-bar"><div class="dots"><i></i><i></i><i></i></div><span class="browser-url"><i class="fa fa-lock"></i>mycfo · client portal</span></div>
+                            <!-- TODO: add img/project-mycfo.jpeg and swap this placeholder for an <a class="browser-view"> like the other cards -->
+                            <div class="browser-view placeholder">
+                                <i class="fa fa-chart-line"></i>
+                                screenshot coming soon
                             </div>
                         </div>
-                    </div>
+                        <div class="project-body">
+                            <div class="project-meta">Client project</div>
+                            <h3>MYCFO</h3>
+                            <p>Client Financial Portal — full stack, responsive UI with Tailwind CSS.</p>
+                            <ul class="tags">
+                                <li class="tag">Laravel</li>
+                                <li class="tag">React.js</li>
+                                <li class="tag">TypeScript</li>
+                                <li class="tag">Tailwind CSS</li>
+                                <li class="tag tag-info">UAT / FAT / PAT</li>
+                            </ul>
+                            <div class="project-links">
+                                <!-- TODO: add MYCFO's own live/demo link -->
+                                <span class="na"><i class="fa fa-lock"></i>internal system</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
+
                 <!-- Academic Project: Workshop 1 -->
-                <div class="col-lg-4 col-md-6 portfolio-item academic">
-                    <div class="card h-100 shadow border-0">
-                        <div class="card-body text-center">
-
-                            <div class="mb-3">
-                                <i class="fa fa-futbol fa-3x text-primary"></i>
-                            </div>
-
-                            <span class="badge bg-secondary mb-2">Workshop 1 • 2020</span>
-                            <h5 class="mt-2">Online Football Ticketing System</h5>
-
-                            <p class="text-muted small">
-                                An online ticketing system that allows users to check match schedules,
-                                view ticket availability, and purchase football match tickets.
-                            </p>
-
-                            <div class="mt-3">
-                                <span class="badge bg-primary">C++</span>
-                                <span class="badge bg-primary">HTML</span>
-                                <span class="badge bg-primary">phpMyAdmin</span>
-                            </div>
-
+                <div class="col-lg-4 col-md-6 project-item academic reveal">
+                    <article class="project academic spot">
+                        <div class="academic-head">
+                            <span class="academic-icon"><i class="fa fa-futbol"></i></span>
+                            <div class="project-meta mb-0">Workshop 1 · 2020</div>
                         </div>
-                    </div>
+                        <div class="project-body">
+                            <h3>Online Football Ticketing System</h3>
+                            <p>An online ticketing system that allows users to check match schedules, view ticket availability, and purchase football match tickets.</p>
+                            <ul class="tags">
+                                <li class="tag">C++</li>
+                                <li class="tag">HTML</li>
+                                <li class="tag">phpMyAdmin</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
 
                 <!-- Academic Project: Workshop 2 -->
-                <div class="col-lg-4 col-md-6 portfolio-item academic">
-                    <div class="card h-100 shadow border-0">
-                        <div class="card-body text-center">
-
-                            <div class="mb-3">
-                                <i class="fa fa-user-graduate fa-3x text-primary"></i>
-                            </div>
-
-                            <span class="badge bg-secondary mb-2">Workshop 2 • 2021</span>
-                            <h5 class="mt-2">University Student Information System</h5>
-
-                            <p class="text-muted small">
-                                A group project system that enables students to access academic
-                                information and interact with university subsystems.
-                            </p>
-
-                            <div class="mt-3">
-                                <span class="badge bg-primary">PHP</span>
-                                <span class="badge bg-primary">HTML</span>
-                                <span class="badge bg-primary">CSS</span>
-                                <span class="badge bg-primary">JavaScript</span>
-                                <span class="badge bg-primary">phpMyAdmin</span>
-                            </div>
-
+                <div class="col-lg-4 col-md-6 project-item academic reveal" style="--d:.08s">
+                    <article class="project academic spot">
+                        <div class="academic-head">
+                            <span class="academic-icon"><i class="fa fa-user-graduate"></i></span>
+                            <div class="project-meta mb-0">Workshop 2 · 2021</div>
                         </div>
-                    </div>
+                        <div class="project-body">
+                            <h3>University Student Information System</h3>
+                            <p>A group project system that enables students to access academic information and interact with university subsystems.</p>
+                            <ul class="tags">
+                                <li class="tag">PHP</li>
+                                <li class="tag">HTML</li>
+                                <li class="tag">CSS</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">phpMyAdmin</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
 
                 <!-- Academic Project: Final Year Project -->
-                <div class="col-lg-4 col-md-6 portfolio-item academic">
-                    <div class="card h-100 shadow border-0">
-                        <div class="card-body text-center">
-
-                            <div class="mb-3">
-                                <i class="fa fa-store fa-3x text-primary"></i>
-                            </div>
-
-                            <span class="badge bg-secondary mb-2">Final Year Project • 2022</span>
-                            <h5 class="mt-2">HomeGallery E-Commerce System</h5>
-
-                            <p class="text-muted small">
-                                An e-commerce platform that allows customers to browse,
-                                search, and purchase home products online.
-                            </p>
-
-                            <div class="mt-3">
-                                <span class="badge bg-primary">PHP</span>
-                                <span class="badge bg-primary">HTML</span>
-                                <span class="badge bg-primary">CSS</span>
-                                <span class="badge bg-primary">JavaScript</span>
-                                <span class="badge bg-primary">phpMyAdmin</span>
-                            </div>
-
+                <div class="col-lg-4 col-md-6 project-item academic reveal" style="--d:.16s">
+                    <article class="project academic spot">
+                        <div class="academic-head">
+                            <span class="academic-icon"><i class="fa fa-store"></i></span>
+                            <div class="project-meta mb-0">Final Year Project · 2022</div>
                         </div>
-                    </div>
+                        <div class="project-body">
+                            <h3>HomeGallery E-Commerce System</h3>
+                            <p>An e-commerce platform that allows customers to browse, search, and purchase home products online.</p>
+                            <ul class="tags">
+                                <li class="tag">PHP</li>
+                                <li class="tag">HTML</li>
+                                <li class="tag">CSS</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">phpMyAdmin</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
 
             </div>
-            
         </div>
-    </div>
+    </section>
     <!-- Projects End -->
 
 
     <!-- Achievements Start -->
-    <div class="container-xxl py-6" id="achievements">
+    <section class="section section-alt" id="achievements">
         <div class="container">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Achievements & Certifications</h1>
-                </div>
+            <div class="section-head">
+                <span class="eyebrow reveal">05 — achievements</span>
+                <h2 class="section-title reveal">Achievements <span class="soft">&amp; certifications.</span></h2>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="card h-100 shadow border-0 text-center p-3">
-                        <i class="fa fa-certificate fa-2x text-primary mb-3"></i>
-                        <h6 class="fw-bold mb-1">Oracle Certified Foundations Associate</h6>
-                        <span class="text-muted small">2020</span>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6 reveal">
+                    <div class="award spot">
+                        <div class="award-top"><span class="award-icon"><i class="fa fa-certificate"></i></span><span class="award-year">2020</span></div>
+                        <div>
+                            <h3>Oracle Certified Foundations Associate</h3>
+                            <span class="desc">Professional certification</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="card h-100 shadow border-0 text-center p-3">
-                        <i class="fa fa-trophy fa-2x text-primary mb-3"></i>
-                        <h6 class="fw-bold mb-1">DBFiesta 2021 — Most Likable Video</h6>
-                        <span class="text-muted small">University category, database-themed video</span>
+                <div class="col-lg-3 col-md-6 reveal" style="--d:.06s">
+                    <div class="award spot">
+                        <div class="award-top"><span class="award-icon"><i class="fa fa-trophy"></i></span><span class="award-year">2021</span></div>
+                        <div>
+                            <h3>DBFiesta 2021 — Most Likable Video</h3>
+                            <span class="desc">University category, database-themed video</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="card h-100 shadow border-0 text-center p-3">
-                        <i class="fa fa-medal fa-2x text-primary mb-3"></i>
-                        <h6 class="fw-bold mb-1">1st Place, Ultras Competition</h6>
-                        <span class="text-muted small">Between faculties, 2019</span>
+                <div class="col-lg-3 col-md-6 reveal" style="--d:.12s">
+                    <div class="award spot">
+                        <div class="award-top"><span class="award-icon"><i class="fa fa-medal"></i></span><span class="award-year">2019</span></div>
+                        <div>
+                            <h3>1st Place, Ultras Competition</h3>
+                            <span class="desc">Between faculties</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="card h-100 shadow border-0 text-center p-3">
-                        <i class="fa fa-medal fa-2x text-primary mb-3"></i>
-                        <h6 class="fw-bold mb-1">3rd Place, Women's Handball</h6>
-                        <span class="text-muted small">SAF 14, 2019</span>
+                <div class="col-lg-3 col-md-6 reveal" style="--d:.18s">
+                    <div class="award spot">
+                        <div class="award-top"><span class="award-icon"><i class="fa fa-medal"></i></span><span class="award-year">2019</span></div>
+                        <div>
+                            <h3>3rd Place, Women's Handball</h3>
+                            <span class="desc">SAF 14</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Achievements End -->
 
-    <!-- Soft Skills & Languages Start -->
-    <div class="container-fluid bg-light py-6" id="soft-skills">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-4">Soft Skills</h1>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Communicates well in both Malay and English</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Analytical problem-solving, able to think through issues and find solutions</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Able to work under minimum supervision</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Passionate about acquiring new knowledge and staying current with industry trends</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Team management experience</p>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h1 class="display-5 mb-4">Languages</h1>
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between mb-1">
-                            <span class="fw-bold">Bahasa Melayu</span>
-                            <span class="text-muted">Native speaker</span>
-                        </div>
-                        <div class="progress" style="height: 12px;">
-                            <div class="progress-bar bg-primary" style="width:100%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between mb-1">
-                            <span class="fw-bold">English</span>
-                            <span class="text-muted">Proficient</span>
-                        </div>
-                        <div class="progress" style="height: 12px;">
-                            <div class="progress-bar bg-primary" style="width:85%"></div>
-                        </div>
-                    </div>
 
-                    <h1 class="display-5 mb-4 mt-5">Involvement & Co-Curricular</h1>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Treasurer, Software Engineering Club (2019–2022)</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Committee Member (AJK Protocol), ICT Camp</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Committee Member, Program DBFiesta — created the program book (details, participants, winners)</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Participant, handball competition, SAF 14</p>
-                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Volunteer, 113 Aquathlon Malaysia 2022, Pantai Puteri, Melaka</p>
+    <!-- Soft Skills & Languages Start -->
+    <section class="section" id="soft-skills">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow reveal">06 — beyond code</span>
+                <h2 class="section-title reveal">Soft skills, languages <span class="soft">&amp; involvement.</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 reveal">
+                    <div class="beyond-card">
+                        <h3><i class="fa fa-users"></i>Soft Skills</h3>
+                        <ul class="checklist">
+                            <li>Communicates well in both Malay and English</li>
+                            <li>Analytical problem-solving, able to think through issues and find solutions</li>
+                            <li>Able to work under minimum supervision</li>
+                            <li>Passionate about acquiring new knowledge and staying current with industry trends</li>
+                            <li>Team management experience</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal" style="--d:.08s">
+                    <div class="beyond-card">
+                        <h3><i class="fa fa-language"></i>Languages</h3>
+                        <div class="lang">
+                            <div class="lang-head"><strong>Bahasa Melayu</strong><span>native</span></div>
+                            <div class="meter"><span style="--w:100%"></span></div>
+                        </div>
+                        <div class="lang">
+                            <div class="lang-head"><strong>English</strong><span>proficient</span></div>
+                            <div class="meter"><span style="--w:85%"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal" style="--d:.16s">
+                    <div class="beyond-card">
+                        <h3><i class="fa fa-flag"></i>Involvement &amp; Co-Curricular</h3>
+                        <ul class="checklist">
+                            <li>Treasurer, Software Engineering Club (2019–2022)</li>
+                            <li>Committee Member (AJK Protocol), ICT Camp</li>
+                            <li>Committee Member, Program DBFiesta — created the program book (details, participants, winners)</li>
+                            <li>Participant, handball competition, SAF 14</li>
+                            <li>Volunteer, 113 Aquathlon Malaysia 2022, Pantai Puteri, Melaka</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Soft Skills & Languages End -->
 
+
     <!-- Contact Start -->
-    <div class="container-xxl pb-5" id="contact">
-        <div class="container py-5">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+    <section class="section section-dark" id="contact">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="container position-relative">
+            <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Let's Work Together</h1>
-                </div>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="mb-2">My address:</p>
-                    <h3 class="fw-bold">Bukit Banyan, 08000 Sungai Petani, Kedah</h3>
-                    <p class="mb-2">Currently stay in:</p>
-                    <h3 class="fw-bold">Shah Alam, Selangor</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Call me:</p>
-                    <h3 class="fw-bold">+6013-418 6114</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Mail me:</p>
-                    <h3 class="fw-bold">afrinarizal00@gmail.com</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Follow me:</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/afrina-rizal" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://github.com/AfrinaRizal" target="_blank"><i class="fab fa-github"></i></a>
+                    <span class="eyebrow reveal">07 — contact</span>
+                    <h2 class="contact-title reveal">Let's work <span class="soft">together.</span></h2>
+                    <p class="section-lead reveal">Have a role, a project, or a question about my work? The quickest way to reach me is by email.</p>
+                    <a class="copy-email reveal" href="mailto:afrinarizal00@gmail.com" data-email="afrinarizal00@gmail.com" title="Copy email address">
+                        <span class="addr">afrinarizal00@gmail.com</span>
+                        <span class="hint">click to copy</span>
+                    </a>
+                    <div class="hero-links reveal">
+                        <a href="mailto:afrinarizal00@gmail.com" class="btn btn-accent"><i class="fa fa-paper-plane me-2"></i>Send an email</a>
+                        <a href="cv/AdriyatolAfrina-CV.pdf" target="_blank" rel="noopener" class="btn btn-dark-ghost"><i class="fa fa-download me-2"></i>Download CV</a>
                     </div>
                 </div>
-
+                <div class="col-lg-6 reveal" style="--d:.1s">
+                    <ul class="contact-list">
+                        <li><span class="ic"><i class="fa fa-phone"></i></span><div><small>phone</small><a href="tel:+60134186114">+6013-418 6114</a></div></li>
+                        <li><span class="ic"><i class="fa fa-map-marker-alt"></i></span><div><small>currently based in</small><span class="val">Shah Alam, Selangor</span></div></li>
+                        <li><span class="ic"><i class="fa fa-home"></i></span><div><small>hometown</small><span class="val">Bukit Banyan, 08000 Sungai Petani, Kedah</span></div></li>
+                        <li><span class="ic"><i class="fab fa-linkedin-in"></i></span><div><small>linkedin</small><a href="https://www.linkedin.com/in/afrina-rizal" target="_blank" rel="noopener">linkedin.com/in/afrina-rizal</a></div></li>
+                        <li><span class="ic"><i class="fab fa-github"></i></span><div><small>github</small><a href="https://github.com/AfrinaRizal" target="_blank" rel="noopener">github.com/AfrinaRizal</a></div></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Contact End -->
 
-    <!-- Copyright Start -->
-    <div class="container-fluid bg-dark text-white py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom text-secondary" href="#">AfrinaRizal</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                    </div>
-                </div>
+    </main>
+
+    <!-- Footer Start -->
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+            <div>&copy; <span id="year">2026</span> Adriyatol Afrina. <span class="mono ms-1">Built with HTML, CSS &amp; a little jQuery.</span></div>
+            <div>
+                <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                Based on a template by <a href="https://htmlcodex.com" target="_blank" rel="noopener">HTML Codex</a>
+                · Distributed by <a href="https://themewagon.com" target="_blank" rel="noopener">ThemeWagon</a>
             </div>
         </div>
-    </div>
-    <!-- Copyright End -->
+    </footer>
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#home" class="btn btn-icon back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Template Javascript -->
+    <!-- Site Javascript -->
     <script src="js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
